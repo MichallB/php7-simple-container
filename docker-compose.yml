@@ -1,0 +1,11 @@
+version: "3.7"
+services:
+  web-server:
+    build:
+      dockerfile: php
+      context: .
+    restart: always
+    volumes:
+      - "./www:/var/www/html:Z"
+    ports:
+      - "8080:80"
